@@ -10,18 +10,14 @@ class Question extends Component {
     let proposedAnswer = Math.floor(Math.random() * 3) + value1 + value2 + value3;
     let answer = value1 + value2 + value3 === proposedAnswer;
     
-	return (
+    return (
       <div>
     	<div className="equation">
             <p className="text">{`${value1} + ${value2} + ${value3} = ${proposedAnswer}`}</p>
         </div>
-        <button onClick = {() => {
-							 answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()
-							 }}>True</button>
-		<button onClick = {() => {
-							 !answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()
-							 }}>False</button>
-	  </div>
+        <button onClick = {() => { answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()} }>True</button>
+	<button onClick = {() => { !answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()} }>False</button>
+      </div>
     )
   }
 }
