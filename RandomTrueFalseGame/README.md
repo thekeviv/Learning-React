@@ -6,6 +6,12 @@ If the user selects the correct answer, his/her score and the number of question
 
 This was done as a part of Udacity's Online React NanoDegree program. The possible solution folder contains the solution from Udacity and the src folder contains my own solution. Currently, the application uses my solution.
 
+### Things Learnt
+
+1. State Management in React
+2. Composing application into reusable components
+3. Passing data between components using props
+
 ## Instructions to Run the Project
 
 1. Clone the repo
