@@ -8,18 +8,16 @@ class Game extends Component {
       	numCorrect: 0
     }
 	
-	updateCorrectCount() {
-    	this.setState((prevState) => ({ numCorrect: prevState.numCorrect + 1 }) )
+	updateCorrectCount = () => {
+    	this.setState((prevState) => ({ numCorrect: prevState.numCorrect + 1,
+                                        numQuestions: prevState.numQuestions + 1}) )
     }
 
-	updateQuestionCount() {
+	updateQuestionCount = () => {
     	this.setState((prevState) => ({ numQuestions: prevState.numQuestions + 1 }) )
     }
 
 	render() {
-      this.updateCorrectCount = this.updateCorrectCount.bind(this)
-      this.updateQuestionCount = this.updateQuestionCount.bind(this)
-	  console.log(this.state.numQuestions)
       return (
           <div className="game">
             <h2>Mental Math</h2>
