@@ -2,6 +2,8 @@
 
 This project uses a random number generator to generate 4 numbers. The user is asked if the sum of 3 numbers is equal to the 4th number and is asked to select between true and false. 
 
+![React True or False Game](screenshot.png)
+
 If the user selects the correct answer, his/her score and the number of questions are incremented, else, just the number of questions are incremented.
 
 This was done as a part of Udacity's Online React NanoDegree program. The possible solution folder contains the solution from Udacity and the src folder contains my own solution. Currently, the application uses my solution.
