@@ -15,13 +15,9 @@ class Question extends Component {
     	<div className="equation">
             <p className="text">{`${value1} + ${value2} + ${value3} = ${proposedAnswer}`}</p>
         </div>
-        <button onClick = {() => {
-							 answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()
-							 }}>True</button>
-		<button onClick = {() => {
-							 !answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()
-							 }}>False</button>
-	  </div>
+        <button onClick = {() => { answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()} }>True</button>
+	<button onClick = {() => { !answer ? this.props.UpdateCorrectCount() : this.props.UpdateQuestionCount()} }>False</button>
+      </div>
     )
   }
 }
