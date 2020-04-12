@@ -12,7 +12,7 @@ class User extends Component {
       <div>
         <h2>{this.props.username}</h2>
         {this.props.showGamesPlayed ? (
-          <h2>{this.props.gamesPlayed}</h2>
+          <h3>Games Played: {this.props.gamesPlayed}</h3>
         ) : (
           <h2>*</h2>
         )}
