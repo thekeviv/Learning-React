@@ -5,20 +5,34 @@ class Game extends Component {
   state = {
     users: [{ username: "thekeviv", gamesPlayed: 2 }],
     showGamesPlayed: true,
+    canAddUser: true,
   };
 
   addNewUser = (username, firstname, lastname, gamesPlayed) => {
-    var newUser = {
-      username: username,
-      firstname: firstname,
-      lastname: lastname,
-      gamesPlayed: gamesPlayed,
-    };
-    var currentUsers = this.state.users;
-    currentUsers.push(newUser);
-    this.setState({
-      users: currentUsers,
+    let canAddUser = true;
+    this.state.users.forEach((user) => {
+      if (user.username === username) {
+        canAddUser = false;
+      }
     });
+    if (canAddUser) {
+      var newUser = {
+        username: username,
+        firstname: firstname,
+        lastname: lastname,
+        gamesPlayed: gamesPlayed,
+      };
+      var currentUsers = this.state.users;
+      currentUsers.push(newUser);
+      this.setState({
+        users: currentUsers,
+        canAddUser: true,
+      });
+    } else {
+      this.setState({
+        canAddUser: false,
+      });
+    }
   };
 
   toggleShowGames = () => {
@@ -30,7 +44,10 @@ class Game extends Component {
   render() {
     return (
       <div>
-        <AddNewUser addNewUser={this.addNewUser} />
+        <AddNewUser
+          addNewUser={this.addNewUser}
+          canAddUser={this.state.canAddUser}
+        />
         <div className="show-games-played">
           <h2>Show Games Played by Users?</h2>
           <input

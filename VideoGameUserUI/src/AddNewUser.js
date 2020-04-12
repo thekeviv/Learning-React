@@ -64,6 +64,14 @@ class AddNewUser extends Component {
             }}
           />
         </div>
+        {this.props.canAddUser ? (
+          <p></p>
+        ) : (
+          <p>
+            We're sorry but that username has already been taken, please use
+            another username
+          </p>
+        )}
       </div>
     );
   }
