@@ -7,9 +7,8 @@ class VideoGameUsers extends Component {
         <h1>Video Game Users</h1>
         <ol>
           {this.props.users.map((user) => (
-            <li>
+            <li key={user.username}>
               <User
-                key={user.username}
                 username={user.username}
                 gamesPlayed={user.gamesPlayed}
                 showGamesPlayed={this.props.showGamesPlayed}

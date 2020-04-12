@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 class User extends Component {
   static propTypes = {
-    userName: PropTypes.string.isRequired,
+    username: PropTypes.string.isRequired,
     gamesPlayed: PropTypes.number.isRequired,
     showGamesPlayed: PropTypes.bool.isRequired,
   };
