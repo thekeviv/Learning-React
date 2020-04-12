@@ -62,3 +62,7 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+# prettier
+.prettierrc
+# vs code
+launch.json
